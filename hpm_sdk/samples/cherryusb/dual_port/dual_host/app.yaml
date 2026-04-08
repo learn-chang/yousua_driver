@@ -1,0 +1,6 @@
+excluded_targets:
+  - debug
+  - release
+
+dependency:
+  - board_usb_dual_port

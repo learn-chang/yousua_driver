@@ -1,0 +1,76 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <Exceptions/>
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBuffer/>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+  <ProjectSessionItem path=""/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="10" y="59" useTextEdit="1" path="../../ecat_cia402.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="1481" useTextEdit="1" folds0="636" path="../../SSC/Src/cia402appl.c" left="0" selected="1" top="1345" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="634" useTextEdit="1" path="../../SSC/Src/cia402appl.h" left="0" top="634" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="199" useTextEdit="1" path="../../SSC/Src/mailbox.c" left="0" top="198" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../SSC/Src/objdef.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../SSC/Src/sdoserv.c" left="0" top="102" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../../../soc/HPM6E00/HPM6E80/hpm_clock_drv.c" left="0" top="39" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="31" y="1002" useTextEdit="1" path="../../motor/bldc_foc.c" left="0" top="990" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="909" useTextEdit="1" folds0="1001" path="../../SSC/Src/ecatappl.c" left="0" top="822" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="56" y="796" useTextEdit="1" path="../../SSC/Src/coeappl.c" left="0" top="779" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="80" y="3" useTextEdit="1" path="../../SSC/Src/ecatcoe.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../../../soc/HPM6E00/HPM6E80/system.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="52" y="21" useTextEdit="1" path="../../../../../soc/HPM6E00/HPM6E80/hpm_trgm_soc_drv.c" left="0" top="21" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../../../soc/HPM6E00/HPM6E80/hpm_sysctl_drv.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="12" y="142" useTextEdit="1" path="../../SSC/Src/applInterface.h" left="0" top="118" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="61" y="54" useTextEdit="1" path="../../../port/hpm_ecat_e2p_emulation.c" left="0" top="15" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="52" useTextEdit="1" path="../../../../../middleware/hpm_mcl_v2/encoder/hpm_mcl_uvw.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../../../middleware/hpm_mcl_v2/encoder/hpm_mcl_abz.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../../../soc/HPM6E00/HPM6E80/hpm_otp_drv.c" left="0" top="54" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../SSC/Src/ecatslv.c" left="0" top="0" codecName="Default"/>
+ </Files>
+ <EMStudioWindow activeProject="ecat_cia402 - hpm6e00evk" fileDialogDefaultFilter="*.c" autoConnectTarget="GDB Server" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="1343"/>
+</session>

@@ -1,0 +1,441 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="ecat_cia402" target="20" version="2">
+  <project Name="ecat_cia402 - hpm6e00evk">
+    <configuration
+      Name="Common"
+      LIBRARY_IO_TYPE="STD"
+      arm_linker_heap_size="0x4000"
+      arm_linker_stack_size="0x4000"
+      arm_rtl_variant="SEGGER"
+      arm_linker_no_warn_on_mismatch="Yes"
+      build_generic_options_file_name=""
+      c_user_include_directories="../../../../../arch;../../../../../arch/riscv/l1c;../../../../../arch/riscv/intc;../../../../../boards/hpm6e00evk;../../../../../soc/HPM6E00/HPM6E80;../../../../../soc/HPM6E00/ip;../../../../../soc/HPM6E00/HPM6E80/toolchains;../../../../../soc/HPM6E00/HPM6E80/boot;../../../../../drivers/inc;../../../../../utils;../../../../../components/debug_console;../../../../../components/adc;../../../../../components/eeprom_emulation;../../../../../components/eeprom_emulation/port;../../../../../middleware/hpm_mcl_v2;../../../../../middleware/hpm_mcl_v2/encoder;../../../../../middleware/hpm_mcl_v2/drivers;../../../../../middleware/hpm_mcl_v2/core/sensor;../../../../../middleware/hpm_mcl_v2/core/drivers;../../../../../middleware/hpm_mcl_v2/core/loop;../../../../../middleware/hpm_mcl_v2/core/detect;../../../../../middleware/hpm_mcl_v2/core/control;../build_tmp/generated/include;../../motor;../../SSC/Src;../../../port;../..;"
+      link_linker_script_file="..\..\..\..\..\soc\HPM6E00\HPM6E80\toolchains\segger\flash_xip.icf"
+      link_use_linker_script_file="Yes"
+      linker_output_format="hex"
+      project_directory=""
+      project_type="Executable"
+      debug_target_connection="GDB Server"
+      gdb_server_type="Custom"
+      gdb_server_reset_command="reset halt"
+      gdb_server_autostart_server="Yes"
+      gdb_server_port="3333"
+      gdb_server_command_line="D:/work/sdk_env_v1.11.0/tools/openocd/openocd.exe -f $(ProjectDir)/../../../../../boards/openocd/probes/ft2232.cfg -f $(ProjectDir)/../../../../../boards/openocd/soc/hpm6e80-dual-core.cfg -f $(ProjectDir)/../../../../../boards/openocd/boards/hpm6e00evk.cfg"
+      target_device_name="HPM6E80xVMx"
+      linker_output_format="bin"
+      post_build_command="&quot;$(OBJDUMP)&quot; -S -d &quot;$(OutDir)/demo$(EXE)&quot; &gt; &quot;$(OutDir)/demo.asm&quot;"
+      heap_size="0x4000"
+      stack_size="0x4000"
+      RISCV_TOOLCHAIN_VARIANT="Standard"
+      rv_abi="ilp32f"
+      rv_architecture="rv32imafc"
+      c_additional_options="-Wall;-Wundef;-Wno-format;-fomit-frame-pointer;-fno-builtin;-ffunction-sections;-fdata-sections;-g"
+      rv_arch_ext=""
+      rv_arch_zicsr="No"
+      rv_arch_zifencei="Yes"
+      rv_arch_zba="Yes"
+      rv_arch_zbb="Yes"
+      rv_arch_zbc="Yes"
+      rv_arch_zbs="Yes"
+      rv_debug_extensions="None"
+      rv_toolchain_prefix=""
+      gcc_cplusplus_language_standard="c++11"
+      libcxx="Yes"
+      build_output_file_name="$(OutDir)/demo$(EXE)"
+      linker_printf_fp_enabled="Float"
+      linker_printf_fmt_level="int"
+      linker_printf_wchar_enabled="No"
+      linker_printf_width_precision_supported="Yes"
+      linker_scanf_fp_enabled="No"
+      linker_scanf_fmt_level="int"
+      linker_scanf_character_group_matching_enabled="No"
+      gcc_enable_all_warnings="Yes"
+      gcc_all_warnings_command_line_options="-Wall;-Wextra;-Wno-format"
+      arm_compiler_variant="gcc"
+      arm_assembler_variant="SEGGER"
+      arm_linker_variant="SEGGER"
+      />
+
+  <folder Name="sdk_sample">
+    <folder Name="ethercat">
+      <folder Name="ecat_cia402">
+        <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/sdk_sample/ethercat/ecat_cia402"/>
+        <file file_name="../../ecat_cia402.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/ecat_cia402.c$(OBJ)" />
+        </file>
+        <folder Name="motor">
+          <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/sdk_sample/ethercat/ecat_cia402/motor"/>
+          <file file_name="../../motor/bldc_foc.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/bldc_foc.c$(OBJ)" />
+          </file>
+        </folder>
+        <folder Name="SSC">
+          <folder Name="Src">
+            <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/sdk_sample/ethercat/ecat_cia402/SSC/Src"/>
+            <file file_name="../../SSC/Src/cia402appl.c">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/cia402appl.c$(OBJ)" />
+            </file>
+            <file file_name="../../SSC/Src/coeappl.c">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/coeappl.c$(OBJ)" />
+            </file>
+            <file file_name="../../SSC/Src/ecatappl.c">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/ecatappl.c$(OBJ)" />
+            </file>
+            <file file_name="../../SSC/Src/ecatcoe.c">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/ecatcoe.c$(OBJ)" />
+            </file>
+            <file file_name="../../SSC/Src/ecatslv.c">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/ecatslv.c$(OBJ)" />
+            </file>
+            <file file_name="../../SSC/Src/mailbox.c">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/mailbox.c$(OBJ)" />
+            </file>
+            <file file_name="../../SSC/Src/objdef.c">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/objdef.c$(OBJ)" />
+            </file>
+            <file file_name="../../SSC/Src/sdoserv.c">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/sdoserv.c$(OBJ)" />
+            </file>
+          </folder>
+        </folder>
+      </folder>
+      <folder Name="port">
+        <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/sdk_sample/ethercat/port"/>
+        <file file_name="../../../port/hpm_ecat_hw.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_ecat_hw.c$(OBJ)" />
+        </file>
+        <file file_name="../../../port/hpm_ecat_phy.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_ecat_phy.c$(OBJ)" />
+        </file>
+        <file file_name="../../../port/hpm_ecat_e2p_emulation.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_ecat_e2p_emulation.c$(OBJ)" />
+        </file>
+      </folder>
+    </folder>
+  </folder>
+  <folder Name="soc">
+    <folder Name="HPM6E00">
+      <folder Name="HPM6E80">
+        <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/soc/HPM6E00/HPM6E80"/>
+        <folder Name="toolchains">
+          <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/soc/HPM6E00/HPM6E80/toolchains"/>
+          <file file_name="../../../../../soc/HPM6E00/HPM6E80/toolchains/reset.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/reset.c$(OBJ)" />
+          </file>
+          <file file_name="../../../../../soc/HPM6E00/HPM6E80/toolchains/trap.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/trap.c$(OBJ)" />
+          </file>
+          <folder Name="segger">
+            <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/soc/HPM6E00/HPM6E80/toolchains/segger"/>
+            <file file_name="../../../../../soc/HPM6E00/HPM6E80/toolchains/segger/startup.s">
+              <configuration Name="Common" build_object_file_name="$(IntDir)/startup.s$(OBJ)" />
+            </file>
+          </folder>
+        </folder>
+        <file file_name="../../../../../soc/HPM6E00/HPM6E80/system.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/system.c$(OBJ)" />
+        </file>
+        <file file_name="../../../../../soc/HPM6E00/HPM6E80/hpm_sysctl_drv.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_sysctl_drv.c$(OBJ)" />
+        </file>
+        <file file_name="../../../../../soc/HPM6E00/HPM6E80/hpm_clock_drv.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_clock_drv.c$(OBJ)" />
+        </file>
+        <file file_name="../../../../../soc/HPM6E00/HPM6E80/hpm_otp_drv.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_otp_drv.c$(OBJ)" />
+        </file>
+        <file file_name="../../../../../soc/HPM6E00/HPM6E80/hpm_trgm_soc_drv.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_trgm_soc_drv.c$(OBJ)" />
+        </file>
+        <file file_name="../../../../../soc/HPM6E00/HPM6E80/hpm_qeiv2_soc_drv.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_qeiv2_soc_drv.c$(OBJ)" />
+        </file>
+        <folder Name="boot">
+          <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/soc/HPM6E00/HPM6E80/boot"/>
+          <file file_name="../../../../../soc/HPM6E00/HPM6E80/boot/hpm_bootheader.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_bootheader.c$(OBJ)" />
+          </file>
+        </folder>
+      </folder>
+    </folder>
+  </folder>
+  <folder Name="arch">
+    <folder Name="riscv">
+      <folder Name="l1c">
+        <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/arch/riscv/l1c"/>
+        <file file_name="../../../../../arch/riscv/l1c/hpm_l1c_drv.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_l1c_drv.c$(OBJ)" />
+        </file>
+      </folder>
+    </folder>
+  </folder>
+  <folder Name="boards">
+    <folder Name="hpm6e00evk">
+      <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/boards/hpm6e00evk"/>
+      <file file_name="../../../../../boards/hpm6e00evk/pinmux.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/pinmux.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../boards/hpm6e00evk/board.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/board.c$(OBJ)" />
+      </file>
+    </folder>
+  </folder>
+  <folder Name="drivers">
+    <folder Name="src">
+      <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/drivers/src"/>
+      <file file_name="../../../../../drivers/src/hpm_uart_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_uart_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_femc_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_femc_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_sdp_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_sdp_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_i2c_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_i2c_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_pmp_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_pmp_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_mtg_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mtg_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_rng_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_rng_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_gpio_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_gpio_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_spi_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_spi_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_gptmr_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_gptmr_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_pwmv2_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_pwmv2_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_pllctlv2_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_pllctlv2_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_usb_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_usb_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_rtc_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_rtc_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_acmp_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_acmp_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_i2s_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_i2s_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_dao_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_dao_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_pdmlite_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_pdmlite_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_enet_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_enet_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_adc16_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_adc16_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_pcfg_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_pcfg_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_ptpc_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_ptpc_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_mchtmr_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mchtmr_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_ffa_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_ffa_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_tsns_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_tsns_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_crc_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_crc_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_sdm_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_sdm_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_mcan_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcan_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_qeiv2_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_qeiv2_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_enc_pos_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_enc_pos_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_sei_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_sei_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_qeov2_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_qeov2_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_rdc_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_rdc_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_dmav2_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_dmav2_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_ewdg_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_ewdg_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_plb_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_plb_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_tamp_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_tamp_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_vsc_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_vsc_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_clc_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_clc_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_esc_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_esc_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_ppi_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_ppi_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_lobs_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_lobs_drv.c$(OBJ)" />
+      </file>
+      <file file_name="../../../../../drivers/src/hpm_tsw_drv.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_tsw_drv.c$(OBJ)" />
+      </file>
+    </folder>
+  </folder>
+  <folder Name="utils">
+    <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/utils"/>
+    <file file_name="../../../../../utils/hpm_swap.c">
+      <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_swap.c$(OBJ)" />
+    </file>
+    <file file_name="../../../../../utils/hpm_ffssi.c">
+      <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_ffssi.c$(OBJ)" />
+    </file>
+    <file file_name="../../../../../utils/hpm_crc32.c">
+      <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_crc32.c$(OBJ)" />
+    </file>
+  </folder>
+  <folder Name="components">
+    <folder Name="debug_console">
+      <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/components/debug_console"/>
+      <file file_name="../../../../../components/debug_console/hpm_debug_console.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_debug_console.c$(OBJ)" />
+      </file>
+    </folder>
+    <folder Name="eeprom_emulation">
+      <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/components/eeprom_emulation"/>
+      <file file_name="../../../../../components/eeprom_emulation/eeprom_emulation.c">
+        <configuration Name="Common" build_object_file_name="$(IntDir)/eeprom_emulation.c$(OBJ)" />
+      </file>
+      <folder Name="port">
+        <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/components/eeprom_emulation/port"/>
+        <file file_name="../../../../../components/eeprom_emulation/port/hpm_nor_flash.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_nor_flash.c$(OBJ)" />
+        </file>
+      </folder>
+    </folder>
+  </folder>
+  <folder Name="middleware">
+    <folder Name="hpm_mcl_v2">
+      <folder Name="encoder">
+        <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/middleware/hpm_mcl_v2/encoder"/>
+        <file file_name="../../../../../middleware/hpm_mcl_v2/encoder/hpm_mcl_abz.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_abz.c$(OBJ)" />
+        </file>
+        <file file_name="../../../../../middleware/hpm_mcl_v2/encoder/hpm_mcl_uvw.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_uvw.c$(OBJ)" />
+        </file>
+      </folder>
+      <folder Name="drivers">
+        <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/middleware/hpm_mcl_v2/drivers"/>
+        <file file_name="../../../../../middleware/hpm_mcl_v2/drivers/hpm_mcl_hw_loop.c">
+          <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_hw_loop.c$(OBJ)" />
+        </file>
+      </folder>
+      <folder Name="core">
+        <folder Name="sensor">
+          <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/middleware/hpm_mcl_v2/core/sensor"/>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/sensor/hpm_mcl_encoder.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_encoder.c$(OBJ)" />
+          </file>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/sensor/hpm_mcl_analog.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_analog.c$(OBJ)" />
+          </file>
+        </folder>
+        <folder Name="drivers">
+          <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/middleware/hpm_mcl_v2/core/drivers"/>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/drivers/hpm_mcl_drivers.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_drivers.c$(OBJ)" />
+          </file>
+        </folder>
+        <folder Name="loop">
+          <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/middleware/hpm_mcl_v2/core/loop"/>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/loop/hpm_mcl_loop.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_loop.c$(OBJ)" />
+          </file>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/loop/hpm_mcl_debug.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_debug.c$(OBJ)" />
+          </file>
+        </folder>
+        <folder Name="detect">
+          <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/middleware/hpm_mcl_v2/core/detect"/>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/detect/hpm_mcl_detect.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_detect.c$(OBJ)" />
+          </file>
+        </folder>
+        <folder Name="control">
+          <configuration Name="Common" build_intermediate_directory="Output/$(Configuration)/Obj/$(ProjectName)/middleware/hpm_mcl_v2/core/control"/>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/control/hpm_mcl_control.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_control.c$(OBJ)" />
+          </file>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/control/hpm_mcl_filter.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_filter.c$(OBJ)" />
+          </file>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/control/hpm_mcl_path_plan.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_path_plan.c$(OBJ)" />
+          </file>
+          <file file_name="../../../../../middleware/hpm_mcl_v2/core/control/hpm_mcl_hybrid_ctrl.c">
+            <configuration Name="Common" build_object_file_name="$(IntDir)/hpm_mcl_hybrid_ctrl.c$(OBJ)" />
+          </file>
+        </folder>
+      </folder>
+    </folder>
+  </folder>
+
+  </project>
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gdb_server_allow_memory_access_during_execution="Yes"
+    gdb_server_ignore_checksum_errors="No"
+    gdb_server_register_access="General and Individual"
+    gcc_optimization_level="None"
+  />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="None"
+    gcc_omit_frame_pointer="Yes"
+    gcc_optimization_level="Level 1"
+  />
+  <configuration Name="Common"
+    c_preprocessor_definitions="FLASH_XIP=1;HPMSOC_HAS_HPMSDK_MULTICORE=y;HPMSOC_HAS_HPMSDK_GPIO=y;HPMSOC_HAS_HPMSDK_PLIC=y;HPMSOC_HAS_HPMSDK_MCHTMR=y;HPMSOC_HAS_HPMSDK_PLICSW=y;HPMSOC_HAS_HPMSDK_GPTMR=y;HPMSOC_HAS_HPMSDK_UART=y;HPMSOC_HAS_HPMSDK_I2C=y;HPMSOC_HAS_HPMSDK_SPI=y;HPMSOC_HAS_HPMSDK_CRC=y;HPMSOC_HAS_HPMSDK_TSNS=y;HPMSOC_HAS_HPMSDK_MBX=y;HPMSOC_HAS_HPMSDK_EWDG=y;HPMSOC_HAS_HPMSDK_DMAMUX=y;HPMSOC_HAS_HPMSDK_DMAV2=y;HPMSOC_HAS_HPMSDK_PPI=y;HPMSOC_HAS_HPMSDK_GPIOM=y;HPMSOC_HAS_HPMSDK_LOBS=y;HPMSOC_HAS_HPMSDK_ADC16=y;HPMSOC_HAS_HPMSDK_ACMP=y;HPMSOC_HAS_HPMSDK_I2S=y;HPMSOC_HAS_HPMSDK_DAO=y;HPMSOC_HAS_HPMSDK_PDMLITE=y;HPMSOC_HAS_HPMSDK_MCAN=y;HPMSOC_HAS_HPMSDK_PTPC=y;HPMSOC_HAS_HPMSDK_QEIV2=y;HPMSOC_HAS_HPMSDK_QEOV2=y;HPMSOC_HAS_HPMSDK_PWMV2=y;HPMSOC_HAS_HPMSDK_RDC=y;HPMSOC_HAS_HPMSDK_SDM=y;HPMSOC_HAS_HPMSDK_PLB=y;HPMSOC_HAS_HPMSDK_SYNT=y;HPMSOC_HAS_HPMSDK_SEI=y;HPMSOC_HAS_HPMSDK_TRGM=y;HPMSOC_HAS_HPMSDK_MTG=y;HPMSOC_HAS_HPMSDK_VSC=y;HPMSOC_HAS_HPMSDK_CLC=y;HPMSOC_HAS_HPMSDK_ENET=y;HPMSOC_HAS_HPMSDK_USB=y;HPMSOC_HAS_HPMSDK_TSW=y;HPMSOC_HAS_HPMSDK_ESC=y;HPMSOC_HAS_HPMSDK_FEMC=y;HPMSOC_HAS_HPMSDK_FFA=y;HPMSOC_HAS_HPMSDK_SDP=y;HPMSOC_HAS_HPMSDK_PSEC=y;HPMSOC_HAS_HPMSDK_PMON=y;HPMSOC_HAS_HPMSDK_RNG=y;HPMSOC_HAS_HPMSDK_KEYM=y;HPMSOC_HAS_HPMSDK_OTP=y;HPMSOC_HAS_HPMSDK_SYSCTL=y;HPMSOC_HAS_HPMSDK_IOC=y;HPMSOC_HAS_HPMSDK_PLLCTLV2=y;HPMSOC_HAS_HPMSDK_PPOR=y;HPMSOC_HAS_HPMSDK_PCFG=y;HPMSOC_HAS_HPMSDK_PDGO=y;HPMSOC_HAS_HPMSDK_PGPR=y;HPMSOC_HAS_HPMSDK_BACC=y;HPMSOC_HAS_HPMSDK_BPOR=y;HPMSOC_HAS_HPMSDK_BCFG=y;HPMSOC_HAS_HPMSDK_BGPR=y;HPMSOC_HAS_HPMSDK_BSEC=y;HPMSOC_HAS_HPMSDK_RTC=y;HPMSOC_HAS_HPMSDK_BKEY=y;HPMSOC_HAS_HPMSDK_BMON=y;HPMSOC_HAS_HPMSDK_TAMP=y;HPMSOC_HAS_HPMSDK_MONO=y;HPMSOC_HAS_HPMSDK_PMP=y;CONFIG_MCL_HAS_EXTRA_CONFIG=&quot;mcl_app_config.h&quot;;CONFIG_CIA402_USING_ACTUAL_MOTOR=1;HPM_SES_USE_SEGGER_LD=1;"
+    gdb_server_write_timeout="300"
+    link_symbol_definitions="_heap_size=0x4000;_stack_size=0x4000;_flash_size=16M;_extram_size=32M;_noncacheable_size=256K;"
+    debug_cpu_registers_file="..\..\..\..\..\soc\HPM6E00\HPM6E80\hpm_ses_riscv_cpu_regs.xml"
+    debug_register_definition_file="..\..\..\..\..\soc\HPM6E00\HPM6E80\hpm_ses_reg.xml"
+    debug_restrict_memory_access="No"
+  />
+</solution>
